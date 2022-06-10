@@ -50,6 +50,11 @@ class CineClubWindow(QtWidgets.QWidget):
             res = m.add_movies()
             if res:
                 self.load_movie()
+                msg = QtWidgets.QMessageBox()
+                msg.setWindowTitle("Opération réussit")
+                msg.setText("Enregistrement effectué succès !")
+                msg.setIcon(QtWidgets.QMessageBox.Information)
+                msg.exec_()
 
             self.le_title.clear()
 
